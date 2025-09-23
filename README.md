@@ -2,6 +2,9 @@
 
 A modern, responsive portfolio website showcasing skills, projects, and professional experience. Built with HTML, CSS, and JavaScript.
 
+## deployment link
+https://peternjuguna.netlify.app/
+
 ## Features
 
 - 🎨 Modern and clean design with gradient accents
