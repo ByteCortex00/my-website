@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Njuguna - Software Engineer | MERN Stack & AI/ML Expert</title>
+    <meta name="description" content="Peter Njuguna - Full-Stack Software Engineer specializing in MERN stack development with expertise in Python AI/ML and database solutions. Ready to build innovative, scalable applications.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Netlify Form Detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+    </form>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <span class="gradient-text">PN</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="nav-links">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About</a>
+                <a href="#skills" class="mobile-nav-link">Skills</a>
+                <a href="#projects" class="mobile-nav-link">Projects</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hi, I'm</span>
+                    <span class="hero-name gradient-text">Peter Njuguna</span>
+                </h1>
+                
+                <div class="hero-subtitle">
+                    <span id="typingText" class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                
+                <p class="hero-description">
+                    Passionate software engineer specializing in <strong>MERN stack</strong> development 
+                    with expertise in <strong>Python AI/ML</strong> and <strong>MySQL databases</strong>. 
+                    Ready to build innovative, scalable applications that make a difference.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:peter.njuguna@email.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <a href="#about" class="scroll-btn">
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">About Me</h2>
+                <p class="section-subtitle">
+                    I'm a passionate software engineer with a strong foundation in modern web technologies 
+                    and artificial intelligence. I love building scalable applications that solve real-world problems.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>My Journey</h3>
+                    <div class="about-story">
+                        <p>
+                            Started my coding journey with <strong>Python</strong> and quickly fell in love with 
+                            its power in AI and machine learning. This foundation led me to explore web development, 
+                            where I discovered the <strong>MERN stack</strong>.
+                        </p>
+                        <p>
+                            Today, I specialize in building full-stack applications using <strong>MongoDB</strong>, 
+                            <strong>Express.js</strong>, <strong>React</strong>, and <strong>Node.js</strong>, 
+                            while leveraging my AI/ML background to create intelligent features.
+                        </p>
+                        <p>
+                            My experience with <strong>MySQL</strong> and database optimization allows me to build 
+                            robust, scalable backend systems that can handle complex data requirements.
+                        </p>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="25">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" data-target="10">0</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>MERN Stack Expert</h4>
+                        <p>Full-stack development with MongoDB, Express.js, React, and Node.js</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>AI/ML Enthusiast</h4>
+                        <p>Python-based machine learning and artificial intelligence solutions</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Database Specialist</h4>
+                        <p>MySQL and NoSQL database design, optimization, and management</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h4>Backend Architecture</h4>
+                        <p>Scalable server-side applications and API development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Skills & Expertise</h2>
+                <p class="section-subtitle">
+                    Comprehensive skill set spanning full-stack development, AI/ML, and database management
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML/CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Node.js</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Express.js</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Python</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Database & AI/ML</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>MongoDB</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>MySQL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Machine Learning</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <h3>Technologies I Work With</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">REST APIs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Showcasing innovative solutions built with modern technologies and AI-driven insights
+                </p>
+            </div>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered E-Commerce Platform</h3>
+                        <p>Full-stack MERN application with AI-driven product recommendations and intelligent search functionality.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Analytics Dashboard">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Customer Analytics Dashboard</h3>
+                        <p>Interactive analytics dashboard with real-time data visualization and machine learning insights.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/5926389/pexels-photo-5926389.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chat Application">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-time Chat Application</h3>
+                        <p>Scalable chat platform with WebSocket integration, user authentication, and message encryption.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Socket.io</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/7947664/pexels-photo-7947664.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sales Prediction">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Predictive Sales Model</h3>
+                        <p>Machine learning model for sales forecasting with 95% accuracy using historical data analysis.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="backend">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Task Management API">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management API</h3>
+                        <p>RESTful API with comprehensive CRUD operations, authentication, and automated testing suite.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MySQL</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image Classification">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Image Classification Web App</h3>
+                        <p>Deep learning web application for image classification with 98% accuracy on custom dataset.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    Ready to bring your ideas to life? Let's discuss your project and create something amazing together.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I'm always excited to work on new projects and collaborate with innovative teams. 
+                        Whether you need a full-stack web application, AI-powered solution, or database optimization, 
+                        I'm here to help turn your vision into reality.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>njungush444@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+254 742 018 229</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="why-work">
+                        <h4>Why Work With Me?</h4>
+                        <ul>
+                            <li>✨ Modern, scalable solutions</li>
+                            <li>🚀 Fast delivery and iteration</li>
+                            <li>🎯 Focus on user experience</li>
+                            <li>💡 AI/ML integration expertise</li>
+                            <li>📱 Responsive design guaranteed</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="hidden" name="bot-field">
+                        
+                        <h3>Send a Message</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="gradient-text">Peter Njuguna</span>
+                    </div>
+                    <p>
+                        Full-Stack Software Engineer specializing in MERN stack development 
+                        with expertise in Python AI/ML and database solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:peter.njuguna@email.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Technologies</h4>
+                        <ul>
+                            <li>React & Node.js</li>
+                            <li>Python & AI/ML</li>
+                            <li>MongoDB & MySQL</li>
+                            <li>Express.js</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Peter Njuguna. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> from scratch, no templates, just passion 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
