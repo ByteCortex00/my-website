@@ -1,124 +1,64 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website showcasing skills, projects, and professional experience. Built with HTML, CSS, and JavaScript.
+Portfolio site for Peter Njuguna — full-stack software engineer (MERN, Python AI/ML), based in Nairobi. Built with plain HTML, CSS, and vanilla JavaScript. No build step, no dependencies.
 
-## deployment link
-https://peternjuguna.netlify.app/
+## Deployment
 
-## Features
+https://peternjuguna.netlify.app/ — deploys from `main`.
 
-- 🎨 Modern and clean design with gradient accents
-- 📱 Fully responsive layout for all devices
-- 🎯 Smooth scrolling and animations
-- 💼 Project filtering system
-- 📊 Interactive skills visualization
-- 📝 Contact form with Netlify integration
-- ⚡ Optimized image loading with lazy loading
-- 🎌 Cross-browser compatible
-- ♿ Accessibility features included
+## Design
+
+Editorial minimal: a warm off-white canvas, a single bronze accent, and large Archivo display type doing the work instead of colour. Body copy is Inter; labels and tags are JetBrains Mono.
 
 ## Sections
 
-1. **Header**
-   - Navigation menu
-   - Mobile-responsive hamburger menu
-   - Smooth scroll navigation
+1. **Hero** — rotating role line (typing effect), availability badge, primary CTAs
+2. **About** — professional summary with animated statistic counters
+3. **Services** — what the work actually covers
+4. **Skills** — grouped by category, with proficiency bars that fill on scroll
+5. **Work** — project cards, filterable by category, with tech-stack tags
+6. **Contact** — Netlify-backed contact form, plus direct email
 
-2. **Hero Section**
-   - Animated text typing effect
-   - Social media links
-   - Call-to-action buttons
-   - Floating shape animations
+## Tech
 
-3. **About Section**
-   - Professional summary
-   - Key statistics
-   - Journey highlights
-   - Skills overview
+- HTML5, CSS3 (custom properties, grid, flexbox)
+- Vanilla JavaScript — no framework
+- Google Fonts (Archivo, Inter, JetBrains Mono)
+- Font Awesome 6 for icons
+- Netlify Forms for the contact form
 
-4. **Skills Section**
-   - Technical expertise visualization
-   - Technology stack display
-   - Interactive skill cards
+## Running locally
 
-5. **Projects Section**
-   - Project filtering by category
-   - Project cards with hover effects
-   - Links to live demos and source code
-   - Project descriptions and technologies used
+No build step. Either open `index.html` directly, or serve the folder:
 
-6. **Contact Section**
-   - Contact form with Netlify integration
-   - Social media links
-   - Professional contact information
+```bash
+py -m http.server 5500
+# then visit http://localhost:5500
+```
 
-## Technologies Used
+For live reload, the "Live Server" VS Code extension works well.
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Font Awesome Icons
-- Netlify Forms
-
-## Getting Started
-
-1. Clone the repository or download the files
-
-2. Using Visual Studio Code:
-   - Install the "Live Server" extension
-   - Right-click on `index.html`
-   - Select "Open with Live Server"
-
-3. The website will open in your default browser at `http://localhost:5500` (or similar port)
-
-## File Structure
+## File structure
 
 ```
-portfolio-website/
+my-website/
 ├── index.html
 ├── styles.css
 ├── script.js
 └── README.md
 ```
 
-## Development Notes
+## Notes
 
-- Images are loaded from Pexels (ensure active internet connection)
-- Gradient text effects use CSS background-clip
-- Smooth scrolling implemented using CSS scroll-behavior
-- Mobile menu uses JavaScript for toggle functionality
-- Project filtering uses JavaScript for dynamic content display
+- The contact form relies on Netlify Forms. It needs the hidden `<form name="contact" netlify ...>` detection stub in `index.html` and the `form-name` hidden input inside the visible form — removing either silently breaks submissions.
+- Project images are hotlinked from Pexels, so an internet connection is required to see them.
+- Responsive breakpoints are at 900px, 768px, and 480px.
+- Scroll-triggered animations use `IntersectionObserver`.
 
-## Browser Support
+## Browser support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-
-## Performance Optimizations
-
-- Lazy loading for images
-- Debounced scroll events
-- Optimized animations
-- Minified CSS and JavaScript
-- Compressed images
-
-## Future Enhancements
-- [ ] Blog section
-- [ ] Project case studies
-- [ ] Additional project filtering options
-- [ ] Animation performance improvements
-
-## Contributing
-
-If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+Current versions of Chrome, Firefox, Safari, and Edge.
 
 ## Contact
 
-For any questions or suggestions, feel free to reach out through the contact form on the website.
+Via the contact form on the site, or njungush444@gmail.com.
