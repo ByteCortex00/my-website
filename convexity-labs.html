@@ -121,7 +121,7 @@
                 <li><strong>Volatility surface.</strong> Implied volatility priced on Black-76 forward pricing, with skew analytics across expiries.</li>
                 <li><strong>Order flow.</strong> Level-2 order book, cumulative volume delta (CVD) and footprint candles built from Binance's aggregate-trade stream, shown as a depth ladder and book heatmap.</li>
                 <li><strong>Regime detection.</strong> Pin score, breakout probability and regime strength, surfaced on the trading desk.</li>
-                <li><strong>History.</strong> A tick-level trade tape, open-interest changes and option flow — with the dealer side measured, not inferred — archived to TimescaleDB for replay and research.</li>
+                <li><strong>History.</strong> A tick-level trade tape, open-interest changes and every option trade with its taker side — a strong proxy for which side dealers took — archived to TimescaleDB for replay and research.</li>
             </ul>
 
             <h2>How it's built</h2>
@@ -176,6 +176,11 @@
                 <a href="https://convexitylabs.co.ke/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Convexity Labs <i class="fas fa-arrow-up-right-from-square"></i></a>
                 <a href="./#contact" class="btn btn-ghost">Talk to me about a role</a>
             </div>
+
+            <p>
+                Exactly how each number is computed, and where it can be wrong, is on the
+                <a href="https://convexitylabs.co.ke/methodology/">Convexity Labs methodology page</a>.
+            </p>
 
             <p class="case-meta">Written by <a href="./">Peter Njuguna</a>, software engineer in Nairobi. Last updated 25 September 2026.</p>
         </article>
