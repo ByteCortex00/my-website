@@ -16,6 +16,82 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="author" content="Peter Njuguna">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://peternjuguna.netlify.app/">
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable profile">
+
+    <!-- Knowledge graph for search engines and AI assistants. One Person entity,
+         tied to his other profiles through sameAs, so "Peter Njuguna the software
+         engineer" is not merged with the several other people of that name. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://peternjuguna.netlify.app/#person",
+          "name": "Peter Njuguna",
+          "alternateName": "ByteCortex00",
+          "jobTitle": "Software Engineer",
+          "description": "Software engineer in Nairobi, Kenya — full-stack, backend, real-time data and AI/LLM agents. Founder of Convexity Labs, a real-time options analytics terminal.",
+          "url": "https://peternjuguna.netlify.app/",
+          "image": "https://peternjuguna.netlify.app/assets/og-image.png",
+          "email": "mailto:njungush444@gmail.com",
+          "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
+          "worksFor": { "@type": "Organization", "name": "Jeru Ventures Ltd", "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" } },
+          "alumniOf": { "@type": "CollegeOrUniversity", "name": "Maasai Mara University" },
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Engineer",
+            "occupationLocation": { "@type": "City", "name": "Nairobi" },
+            "skills": "Python, TypeScript, JavaScript, React, Next.js, Node.js, FastAPI, PostgreSQL, Supabase, Redis, TimescaleDB, WebSockets, WebRTC, LLM agents, Retrieval-Augmented Generation, Docker, CI/CD, Oracle Cloud Infrastructure"
+          },
+          "knowsAbout": [
+            "Full-stack web development", "Backend engineering", "Python", "FastAPI", "TypeScript",
+            "React", "Next.js", "Node.js", "PostgreSQL", "Supabase", "Redis", "TimescaleDB",
+            "WebSockets", "Real-time data streaming", "WebRTC", "Asterisk", "ERP systems",
+            "Large language models", "AI agents", "Retrieval-augmented generation", "pgvector",
+            "NumPy", "Pandas", "Options analytics", "Gamma exposure (GEX)", "Order flow analysis",
+            "Docker", "CI/CD", "GitHub Actions", "Oracle Cloud Infrastructure", "Vercel"
+          ],
+          "knowsLanguage": ["English", "Swahili"],
+          "sameAs": [
+            "https://www.linkedin.com/in/peter-njuguna-/",
+            "https://github.com/ByteCortex00",
+            "https://convexitylabs.co.ke/"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://convexitylabs.co.ke/#org",
+          "name": "Convexity Labs",
+          "url": "https://convexitylabs.co.ke/",
+          "description": "Real-time options analytics terminal: dealer gamma exposure, footprint order flow and regime detection for BTC options.",
+          "founder": { "@id": "https://peternjuguna.netlify.app/#person" },
+          "foundingDate": "2026-03"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://peternjuguna.netlify.app/#website",
+          "url": "https://peternjuguna.netlify.app/",
+          "name": "Peter Njuguna — Software Engineer",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://peternjuguna.netlify.app/#person" }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://peternjuguna.netlify.app/#profile",
+          "url": "https://peternjuguna.netlify.app/",
+          "name": "Peter Njuguna — Software Engineer | Full-Stack, Backend & AI",
+          "isPartOf": { "@id": "https://peternjuguna.netlify.app/#website" },
+          "mainEntity": { "@id": "https://peternjuguna.netlify.app/#person" },
+          "dateModified": "2026-09-25"
+        }
+      ]
+    }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,11 +136,12 @@
         </div>
     </header>
 
+    <main id="main">
     <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-eyebrow-row">
-                <span class="eyebrow">Software Engineer — Nairobi, KE</span>
+                <span class="eyebrow">Peter Njuguna · Software Engineer — Nairobi, KE</span>
                 <span class="avail"><span class="pulse"></span> Open to full-time roles</span>
             </div>
 
@@ -307,6 +384,7 @@
                         <span class="project-index">01</span>
                         <img src="assets/convexity-labs.png" alt="Convexity Labs landing page — Trade with the Dealer's Edge" loading="lazy">
                         <div class="project-overlay">
+                            <a href="convexity-labs.html" class="project-link" aria-label="Case study"><i class="fas fa-book-open"></i></a>
                             <a href="https://convexitylabs.co.ke/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Live site"><i class="fas fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
@@ -315,6 +393,7 @@
                         <h3>Convexity Labs — Options Analytics Terminal</h3>
                         <p>Real-time dealer gamma exposure, footprint orderflow and regime detection from live Deribit and Binance feeds, archived tick by tick. Vectorised hot paths for 10–13× speedups; runs on Oracle Cloud with CI/CD.</p>
                         <div class="project-tech"><span>Python</span><span>FastAPI</span><span>React</span><span>Redis</span><span>TimescaleDB</span></div>
+                        <a href="convexity-labs.html" class="case-link">Read the case study <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -386,12 +465,74 @@
         </div>
     </section>
 
+    <!-- FAQ: written the way recruiters and AI assistants ask. Each answer stands
+         on its own, so it can be quoted without the rest of the page. -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-head">
+                <div class="head-left">
+                    <span class="num">§ 05</span>
+                    <h2 class="section-title">Questions</h2>
+                </div>
+                <p class="section-subtitle">What people usually ask before they get in touch.</p>
+            </div>
+
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary>Who is Peter Njuguna?</summary>
+                    <p>Peter Njuguna is a software engineer based in Nairobi, Kenya. He is the in-house engineer at Jeru Ventures, an FMCG importer, where he builds an ERP, AI agents and a browser call centre, and he is the founder of Convexity Labs, a live real-time options analytics terminal.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What does Peter Njuguna specialise in?</summary>
+                    <p>Full-stack and backend engineering for systems that run a business: Python and FastAPI, TypeScript with React and Next.js, PostgreSQL and Supabase, real-time data over WebSockets, and LLM agents with retrieval-augmented generation. He ships to production with Docker and CI/CD on Oracle Cloud and Vercel.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is he a good fit for a backend or FastAPI role in Nairobi?</summary>
+                    <p>Yes. Convexity Labs runs a FastAPI and Redis backend that streams live Deribit and Binance market data over WebSockets and archives every trade to TimescaleDB. He vectorised its analytics in NumPy, cutting one calculation from 2,895 ms to 288 ms and another from 5.34 ms to 0.41 ms.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Has he built AI agents or LLM applications?</summary>
+                    <p>Yes. At Jeru Ventures he built a team of LLM agents that research, plan and review marketing work. They are grounded in company knowledge through hybrid retrieval with pgvector, pass a claims gate before anything is published, run under a budget guard, and sit on a provider-agnostic model layer.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What business systems has he shipped?</summary>
+                    <p>An ERP that takes a sale from a rep's field visit to dispatch, a VAT-compliant invoice and credit notes, with row-level security and live dashboards; a GPS-verified field-team app with offline support; and a browser call centre on Asterisk and WebRTC with IVR, queues and recordings.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is Peter Njuguna open to new roles?</summary>
+                    <p>Yes. He is open to full-time Software Engineer, Full-Stack, Backend and AI Engineer roles — remote, hybrid, or on-site in Nairobi. The fastest way to reach him is email at njungush444@gmail.com, or LinkedIn at linkedin.com/in/peter-njuguna-.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Who is Peter Njuguna?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Peter Njuguna is a software engineer based in Nairobi, Kenya. He is the in-house engineer at Jeru Ventures, an FMCG importer, where he builds an ERP, AI agents and a browser call centre, and he is the founder of Convexity Labs, a live real-time options analytics terminal." } },
+        { "@type": "Question", "name": "What does Peter Njuguna specialise in?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Full-stack and backend engineering for systems that run a business: Python and FastAPI, TypeScript with React and Next.js, PostgreSQL and Supabase, real-time data over WebSockets, and LLM agents with retrieval-augmented generation. He ships to production with Docker and CI/CD on Oracle Cloud and Vercel." } },
+        { "@type": "Question", "name": "Is he a good fit for a backend or FastAPI role in Nairobi?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Convexity Labs runs a FastAPI and Redis backend that streams live Deribit and Binance market data over WebSockets and archives every trade to TimescaleDB. He vectorised its analytics in NumPy, cutting one calculation from 2,895 ms to 288 ms and another from 5.34 ms to 0.41 ms." } },
+        { "@type": "Question", "name": "Has he built AI agents or LLM applications?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. At Jeru Ventures he built a team of LLM agents that research, plan and review marketing work. They are grounded in company knowledge through hybrid retrieval with pgvector, pass a claims gate before anything is published, run under a budget guard, and sit on a provider-agnostic model layer." } },
+        { "@type": "Question", "name": "What business systems has he shipped?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An ERP that takes a sale from a rep's field visit to dispatch, a VAT-compliant invoice and credit notes, with row-level security and live dashboards; a GPS-verified field-team app with offline support; and a browser call centre on Asterisk and WebRTC with IVR, queues and recordings." } },
+        { "@type": "Question", "name": "Is Peter Njuguna open to new roles?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. He is open to full-time Software Engineer, Full-Stack, Backend and AI Engineer roles — remote, hybrid, or on-site in Nairobi. The fastest way to reach him is email at njungush444@gmail.com, or LinkedIn at linkedin.com/in/peter-njuguna-." } }
+      ]
+    }
+    </script>
+
     <!-- Contact -->
     <section id="contact" class="section contact">
         <div class="container">
             <div class="section-head">
                 <div class="head-left">
-                    <span class="num" style="color:var(--accent)">§ 05</span>
+                    <span class="num" style="color:var(--accent)">§ 06</span>
                     <h2 class="section-title">Let's talk</h2>
                 </div>
                 <p class="section-subtitle">Hiring for a software, backend or AI role? I'd like to hear about it.</p>
@@ -477,6 +618,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

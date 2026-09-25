@@ -1,0 +1,53 @@
+# Peter Njuguna — Software Engineer (Nairobi, Kenya)
+
+> Peter Njuguna is a software engineer in Nairobi, Kenya, working across full-stack, backend, real-time data and AI/LLM agents. He is the in-house software engineer at Jeru Ventures Ltd (an FMCG importer) and the founder of Convexity Labs, a live real-time options analytics terminal. He is open to full-time Software Engineer, Full-Stack, Backend and AI Engineer roles — remote, hybrid, or on-site in Nairobi.
+
+Not to be confused with other people named Peter Njuguna (for example the Kenyan politician Peter Njuguna Gitau, or the CEO of SASRA). This Peter Njuguna is the software engineer and founder of Convexity Labs, known on GitHub as ByteCortex00.
+
+## Profiles
+
+- [Portfolio](https://peternjuguna.netlify.app/): projects, skills and contact
+- [LinkedIn](https://www.linkedin.com/in/peter-njuguna-/): full work history
+- [GitHub](https://github.com/ByteCortex00)
+- [Convexity Labs](https://convexitylabs.co.ke/): his live product
+- Email: njungush444@gmail.com
+
+## Skills
+
+- Languages: Python, TypeScript, JavaScript, SQL
+- Frontend: React, Next.js, Tailwind CSS, Zustand
+- Backend: FastAPI, Node.js, Express, REST APIs, WebSockets, Socket.io
+- Data: PostgreSQL, Supabase (row-level security), TimescaleDB, Redis, MongoDB, NumPy, Pandas, Polars
+- AI: LLM agents, retrieval-augmented generation (RAG), pgvector, provider-agnostic model clients
+- Telephony: Asterisk, WebRTC, SIP, IVR
+- DevOps: Docker, GitHub Actions, CI/CD, Caddy, Oracle Cloud Infrastructure (OCI), Vercel, Netlify
+- Testing: Vitest, pytest
+
+## Work
+
+### Software Engineer — Jeru Ventures Ltd, Nairobi (July 2026 – present)
+In-house engineer for an FMCG import and distribution company, building its business software end to end:
+- A sales and distribution ERP: field visits, orders, dispatch, VAT-compliant invoicing and credit notes, row-level security and live dashboards (Next.js, TypeScript, Supabase/PostgreSQL, Vitest).
+- A GPS-verified field-team app: photo proof of work, live maps, route replay, offline-first PWA, Excel reports, and GPS-accuracy fraud signals.
+- A browser call centre: IVR, queues, WebRTC agents, recordings, outbound telesales and a live supervisor dashboard (Asterisk, Node.js).
+- AI marketing agents: LLM agents grounded in company knowledge through hybrid retrieval (pgvector), with a claims gate and a budget guard.
+
+### Founder & Software Engineer — Convexity Labs (March 2026 – present)
+Designed, built and runs alone a real-time options analytics terminal (https://convexitylabs.co.ke/):
+- Streams live Deribit options and Binance order-book data over WebSockets (Python, FastAPI, Redis).
+- Models dealer gamma exposure (GEX), vanna and charm, a Black-76 volatility surface, footprint order flow and market regime.
+- Archives tick-level trades, open interest and option flow to TimescaleDB; backtests with structural lookahead prevention.
+- Vectorised NumPy hot paths: gamma-flip finder 2,895 ms → 288 ms (10×); gamma exposure by strike 5.34 ms → 0.41 ms (13×).
+- Deploys to Oracle Cloud (ARM) through tag-gated CI/CD; JWT auth, API keys, rate limits and security headers.
+- Case study: https://peternjuguna.netlify.app/convexity-labs.html
+
+### Full-Stack Developer & Data Analyst — Freelance (January 2024 – present)
+- Led LandGen, an AI-powered environmental monitoring platform built at the Mazingira Day Hackathon (satellite imagery, geospatial APIs, React/Node.js).
+- Built Job Bridge, a MERN recruitment platform with machine-learning candidate matching.
+- Python time-series forecasting and regression on market data (Pandas, NumPy, scikit-learn).
+
+## Education
+
+- Maasai Mara University — Bachelor's degree, Computer Science
+
+Last updated: 2026-09-25

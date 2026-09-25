@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convexity Labs case study — real-time options analytics | Peter Njuguna</title>
+    <meta name="description" content="How Peter Njuguna built Convexity Labs, a real-time options analytics terminal: live Deribit and Binance feeds, dealer gamma exposure, TimescaleDB tick archive, 10–13× NumPy speedups, deployed on Oracle Cloud.">
+    <meta name="author" content="Peter Njuguna">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://peternjuguna.netlify.app/convexity-labs.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Peter Njuguna">
+    <meta property="og:url" content="https://peternjuguna.netlify.app/convexity-labs.html">
+    <meta property="og:title" content="Convexity Labs — building a real-time options analytics terminal">
+    <meta property="og:description" content="Live market feeds, dealer gamma exposure, a tick-level archive and 10–13× NumPy speedups — designed, built and run solo.">
+    <meta property="og:image" content="https://peternjuguna.netlify.app/assets/convexity-labs.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://peternjuguna.netlify.app/convexity-labs.html#article",
+          "headline": "Convexity Labs — building a real-time options analytics terminal",
+          "description": "Case study: live Deribit and Binance feeds, dealer gamma exposure, a TimescaleDB tick archive and 10–13× NumPy speedups, deployed on Oracle Cloud with CI/CD.",
+          "image": "https://peternjuguna.netlify.app/assets/convexity-labs.png",
+          "datePublished": "2026-09-25",
+          "dateModified": "2026-09-25",
+          "author": { "@type": "Person", "@id": "https://peternjuguna.netlify.app/#person", "name": "Peter Njuguna", "url": "https://peternjuguna.netlify.app/" },
+          "publisher": { "@type": "Person", "@id": "https://peternjuguna.netlify.app/#person", "name": "Peter Njuguna" },
+          "about": { "@type": "SoftwareApplication", "@id": "https://convexitylabs.co.ke/#app" },
+          "mainEntityOfPage": "https://peternjuguna.netlify.app/convexity-labs.html",
+          "keywords": "FastAPI, WebSockets, Redis, TimescaleDB, NumPy vectorisation, options analytics, gamma exposure, order flow, Docker, CI/CD, Oracle Cloud"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://convexitylabs.co.ke/#app",
+          "name": "Convexity Labs",
+          "url": "https://convexitylabs.co.ke/",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "description": "Real-time options analytics terminal: dealer gamma exposure, footprint order flow and regime detection for BTC options.",
+          "author": { "@id": "https://peternjuguna.netlify.app/#person" },
+          "creator": { "@id": "https://peternjuguna.netlify.app/#person" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Peter Njuguna", "item": "https://peternjuguna.netlify.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Convexity Labs case study", "item": "https://peternjuguna.netlify.app/convexity-labs.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="header scrolled">
+        <div class="container">
+            <nav class="nav">
+                <a href="./" class="logo">PETER NJUGUNA<span class="dot">.</span></a>
+                <div class="nav-links">
+                    <a href="./#projects" class="nav-link">Work</a>
+                    <a href="./#faq" class="nav-link">Questions</a>
+                    <a href="./#contact" class="nav-link nav-cta">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="case">
+        <article class="container case-body">
+            <nav class="crumbs" aria-label="Breadcrumb"><a href="./">Peter Njuguna</a> / <span>Case study</span></nav>
+
+            <span class="eyebrow">Case study · Founder &amp; sole engineer · March 2026 – present</span>
+            <h1 class="case-title">Convexity Labs — a real-time options analytics terminal</h1>
+            <p class="case-lede">
+                Convexity Labs shows options traders where dealers are positioned, in real time. I designed, built
+                and run it alone: live market feeds in, gamma-exposure and order-flow analytics out, every trade
+                archived — deployed on Oracle Cloud and live at
+                <a href="https://convexitylabs.co.ke/" target="_blank" rel="noopener noreferrer">convexitylabs.co.ke</a>.
+            </p>
+
+            <figure class="case-figure">
+                <img src="assets/convexity-labs.png" width="1200" height="630"
+                     alt="Convexity Labs landing page: 'Trade with the Dealer's Edge' — real-time gamma intelligence">
+                <figcaption>The public landing page. The terminal itself sits behind sign-in.</figcaption>
+            </figure>
+
+            <dl class="case-facts">
+                <div><dt>Role</dt><dd>Founder, sole engineer</dd></div>
+                <div><dt>Stack</dt><dd>Python · FastAPI · NumPy · Polars · Redis · PostgreSQL / TimescaleDB · React · Docker</dd></div>
+                <div><dt>Data</dt><dd>Deribit options chain · Binance L2 order book and trade stream</dd></div>
+                <div><dt>Runs on</dt><dd>Oracle Cloud Infrastructure (ARM) · tag-gated CI/CD</dd></div>
+            </dl>
+
+            <h2>The problem</h2>
+            <p>
+                Market makers who sell options hedge by trading the underlying, and how much they must hedge depends on
+                their <strong>gamma exposure (GEX)</strong>. Where that exposure flips sign, price tends to either
+                pin or accelerate. The inputs are public — the whole options chain and the live order book — but turning
+                them into a view a trader can act on means recomputing Greeks across hundreds of contracts every few
+                seconds and streaming the result without lag.
+            </p>
+
+            <h2>What it does</h2>
+            <ul class="case-list">
+                <li><strong>Dealer positioning.</strong> Gamma exposure by strike, the gamma-flip level, vanna and charm, and dealer hedge levels, recomputed as the chain updates.</li>
+                <li><strong>Volatility surface.</strong> Implied volatility priced on Black-76 forward pricing, with skew analytics across expiries.</li>
+                <li><strong>Order flow.</strong> Level-2 order book, cumulative volume delta (CVD) and footprint candles built from Binance's aggregate-trade stream, shown as a depth ladder and book heatmap.</li>
+                <li><strong>Regime detection.</strong> Pin score, breakout probability and regime strength, surfaced on the trading desk.</li>
+                <li><strong>History.</strong> A tick-level trade tape, open-interest changes and option flow — with the dealer side measured, not inferred — archived to TimescaleDB for replay and research.</li>
+            </ul>
+
+            <h2>How it's built</h2>
+            <p>
+                Ingestion runs as separate processes — one for Deribit, one for Binance — that publish into Redis. A
+                FastAPI service computes the analytics and broadcasts them to the browser over WebSockets, using a
+                binary stream for order flow. A separate worker writes history to TimescaleDB through a write queue,
+                so a slow disk never stalls the live feed. The front end is React with Zustand state and dockable
+                panels that remember each trader's layout.
+            </p>
+            <p>
+                A backtest harness replays the archive with <strong>structural lookahead prevention</strong>: a
+                strategy can only see data stamped before the moment it is deciding on, enforced by the replay engine
+                rather than left to the strategy's author.
+            </p>
+
+            <h2>Making it fast</h2>
+            <p>
+                The first version of the analytics pipeline was plain Python loops. I rewrote the hot paths as
+                vectorised NumPy — broadcasting whole scans at once and aggregating with <code>np.add.at</code> —
+                and measured each change:
+            </p>
+            <div class="table-wrap">
+                <table class="case-table">
+                    <thead><tr><th scope="col">Calculation</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Speedup</th></tr></thead>
+                    <tbody>
+                        <tr><td>Gamma-flip finder (500-point scan × 735 contracts, one broadcast)</td><td>2,895 ms</td><td>288 ms</td><td>10×</td></tr>
+                        <tr><td>Gamma exposure aggregated by strike</td><td>5.34 ms</td><td>0.41 ms</td><td>13×</td></tr>
+                        <tr><td>Flip-finder normal-PDF step (SciPy replaced, scan reduced)</td><td>254 ms</td><td>30 ms</td><td>8×</td></tr>
+                        <tr><td>GEX slope (two scalar passes → one vectorised pass)</td><td>7.8 ms</td><td>2.4 ms</td><td>3×</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Running it in production</h2>
+            <ul class="case-list">
+                <li><strong>Deploys on a tag, not a merge.</strong> A self-hosted GitHub Actions runner on the production box builds native ARM images and deploys when a release tag is pushed; rollback is the same workflow aimed at the previous tag.</li>
+                <li><strong>Edge security.</strong> Caddy terminates TLS and adds security headers; Postgres and Redis are never published; an API key guards every route and both WebSockets.</li>
+                <li><strong>Accounts.</strong> Real user accounts with scrypt-hashed passwords and JWT sessions, with per-IP rate limits on the public endpoints.</li>
+                <li><strong>Operations.</strong> Memory ceilings on every container, a <code>/healthz</code> endpoint that can actually fail, and migrations run as a gated one-shot service.</li>
+            </ul>
+
+            <h2>What it shows about how I work</h2>
+            <p>
+                I take a system from an empty repository to something people log into: data ingestion, numerical
+                work, a real-time API, the interface, and the unglamorous production details — deploys, security,
+                health checks. I measure before and after I optimise, and I write down why a hard-to-reverse
+                decision was made.
+            </p>
+
+            <div class="case-cta">
+                <a href="https://convexitylabs.co.ke/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Convexity Labs <i class="fas fa-arrow-up-right-from-square"></i></a>
+                <a href="./#contact" class="btn btn-ghost">Talk to me about a role</a>
+            </div>
+
+            <p class="case-meta">Written by <a href="./">Peter Njuguna</a>, software engineer in Nairobi. Last updated 25 September 2026.</p>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Peter Njuguna · <a href="https://www.linkedin.com/in/peter-njuguna-/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/ByteCortex00" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+                <p><a href="./">Back to portfolio</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
