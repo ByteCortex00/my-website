@@ -400,6 +400,16 @@ a { color: inherit; text-decoration: none; }
     transition: transform .5s ease, filter .5s ease;
 }
 .project-card:hover .project-image img { transform: scale(1.05); filter: grayscale(0); }
+/* Typographic tile for work whose source and screenshots are private. */
+.project-mark {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--display); font-weight: 900;
+    font-size: clamp(40px, 7vw, 72px); letter-spacing: -0.02em;
+    color: var(--line-strong);
+    transition: color .5s ease, transform .5s ease;
+}
+.project-card:hover .project-mark { color: var(--accent); transform: scale(1.05); }
 .project-index {
     position: absolute; top: 14px; left: 14px;
     font-family: var(--mono); font-size: 12px;

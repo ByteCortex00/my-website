@@ -9,10 +9,10 @@ const typingText = document.getElementById('typingText');
 
 // ---------- Rotating role line ----------
 const roles = [
-    'MERN Stack Developer',
-    'Python AI Engineer',
-    'Database Specialist',
-    'Full-Stack Engineer'
+    'Full-Stack Engineer',
+    'Backend Engineer',
+    'AI / LLM Engineer',
+    'Founder, Convexity Labs'
 ];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 
